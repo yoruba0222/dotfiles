@@ -2,6 +2,9 @@
 PROMPT='%F{027}%n%f %F{087}%~%f
 %F{051}❯%f%F{123}❯%f%F{165}❯%f '
 
+#Alias settings
+alias set-option='tmux set-option'
+
 ### Added by Zinit's installer
 if [[ ! -f $HOME/.zinit/bin/zinit.zsh ]]; then
     print -P "%F{33}▓▒░ %F{220}Installing %F{33}DHARMA%F{220} Initiative Plugin Manager (%F{33}zdharma/zinit%F{220})…%f"
@@ -22,3 +25,21 @@ zinit light zsh-users/zsh-autosuggestions
 zinit light zdharma/history-search-multi-word
 zinit light paulirish/git-open
 zinit light b4b4r07/enhancd
+
+###aliases
+#others
+alias sc='screen /dev/tty.usbserial-AI05V9H1Gi'
+alias ls='exa -l -T -L 2'
+
+#git aliases
+alias gp='git push'
+alias gc='git commit'
+alias ga='git add'
+
+
+#start settings
+#source ~/.tmux.conf
+#tmux
+#neofetch
+
+
