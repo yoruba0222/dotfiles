@@ -36,6 +36,11 @@ alias gp='git push'
 alias gc='git commit'
 alias ga='git add'
 
+#omit cd command
+setopt auto_cd
+
+#
+zstyle ':completion:*:default' menu select=2
 
 #start settings
 #source ~/.tmux.conf
