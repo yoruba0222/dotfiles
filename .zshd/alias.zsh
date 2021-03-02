@@ -1,0 +1,5 @@
+alias sc='screen'
+alias ls='exa'
+alias cat='bat'
+alias top='htop'
+alias c='clear'

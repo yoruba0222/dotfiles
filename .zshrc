@@ -1,6 +1,20 @@
-autoload colors
-colors
-PROMPT="%{$fg[green]%}%m%(!.#.$) %{$reset_color%}"
+# used from March 2 2021... 
+#
+#   __ _     _ _       _                 _              
+#  / _(_) __| (_) ___ ( )___     _______| |__  _ __ ___ 
+# | |_| |/ _` | |/ _ \|// __|   |_  / __| '_ \| '__/ __|  #
+# |  _| | (_| | | (_) | \__ \  _ / /\__ \ | | | | | (__   #
+# |_| |_|\__,_|_|\___/  |___/ (_)___|___/_| |_|_|  \___|  #
+#                                                         #
+                                              ############
+
+
+#
+# prompt seettings
+#
+
+# normal prompt
+PROMPT="[%F{blue}%n%f]%f%F{green}❯ %f"
 
 ### Added by Zinit's installer
 if [[ ! -f $HOME/.zinit/bin/zinit.zsh ]]; then
@@ -23,4 +37,8 @@ zinit light zdharma/history-search-multi-word
 zinit light paulirish/git-open
 zinit light b4b4r07/enhancd
 
+#
+# source athor setting files
+#
 
+source .zshd/alias.zsh
