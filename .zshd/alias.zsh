@@ -17,6 +17,7 @@ alias ga='git add'
 alias gc='git commit -m'
 alias gpr='git push -u origin master'
 alias gpn='git push -u origin main'
+alias gs='git status'
 
 # others
 alias sc='screen'
