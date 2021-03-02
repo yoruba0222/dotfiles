@@ -41,5 +41,17 @@ zinit light b4b4r07/enhancd
 # source athor setting files
 #
 
-source .zshd/alias.zsh
-source .zshd/hook.zsh
+ZSHHOME="${HOME}/Repositories/dotfiles/.zshd"
+
+if [ -d $ZSHHOME -a -r $ZSHHOME -a \
+     -x $ZSHHOME ]; then
+    for i in $ZSHHOME/*; do
+        [[ ${i##*/} = *.zsh ]] &&
+            [ \( -f $i -o -h $i \) -a -r $i ] && . $i
+    done
+fi
+
+
+
+#source .zshd/alias.zsh
+#source .zshd/hook.zsh
