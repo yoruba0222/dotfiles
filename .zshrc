@@ -55,3 +55,5 @@ fi
 
 #source .zshd/alias.zsh
 #source .zshd/hook.zsh
+
+echo "\e[35m$(pwd)"
