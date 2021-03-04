@@ -29,3 +29,7 @@ set tabstop=4
 syntax on
 
 hi Comment ctermfg=magenta
+
+set cursorline
+
+hi clear CursorLine

@@ -37,6 +37,9 @@ zinit light zdharma/history-search-multi-word
 zinit light paulirish/git-open
 zinit light b4b4r07/enhancd
 
+# github gh command setting
+eval "$(gh completion -s zsh)"
+
 #
 # source athor setting files
 #
