@@ -6,8 +6,18 @@
 # |_|                       |_|        
 #
 
-# normal prompt
-#PROMPT="[%F{blue}%n%f]%f%F{green}❯ %f"
+# color settings
+autoload colors
+colors
+
+# simple prompt
+PROMPT="[%F{blue}%n%f]%f%F{green}❯ %f"
 
 # menlo prompt
-PROMPT="%{\e[0;30;46m%}%%{[\e[36m%}"
+#PROMPT="%{$fg[black]$bg[blue]%} %n %{$reset_color%}%{${fg[blue]}%} "
+
+# demo prompt
+#PROMPT="%{$fg[green]%}%m%(!.#.$) %{$reset_color%}"
+#PROMPT2="%{$fg[green]%}%_> %{$reset_color%}"
+#SPROMPT="%{$fg[red]%}correct: %R -> %r [nyae]? %{$reset_color%}"
+#RPROMPT="%{$fg[cyan]%}[%~]%{$reset_color%}"
