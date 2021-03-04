@@ -1,4 +1,5 @@
 " used from March 4 2021...
+"
 "   __ _     _ _       _             _                    
 "  / _(_) __| (_) ___ ( )___  __   _(_)_ __ ___  _ __ ___ 
 " | |_| |/ _` | |/ _ \|// __| \ \ / / | '_ ` _ \| '__/ __| "
@@ -18,7 +19,7 @@ set showmatch matchtime=1
 
 set number
 
-"set title
+set title
 
 set smartindent
 
@@ -45,6 +46,7 @@ call neobundle#begin(expand('~/.vim/bundle/'))
 " インストールするプラグインをここに記述する
 NeoBundle 'vim-airline/vim-airline'
 NeoBundle 'vim-airline/vim-airline-themes'
+NeoBundle 'Yggdroot/indentLine'
 
 call neobundle#end()
 
