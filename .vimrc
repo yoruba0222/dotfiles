@@ -18,7 +18,7 @@ set showmatch matchtime=1
 
 set number
 
-set title
+"set title
 
 set smartindent
 
@@ -28,8 +28,39 @@ set tabstop=4
 
 syntax on
 
-hi Comment ctermfg=magenta
+colorscheme peachpuff
 
-set cursorline
+"
+" plugin settings
+"
 
-hi clear CursorLine
+if has('vim_starting')
+	" 初回起動時のみruntimepathにneobundleのパスを指定する
+	set runtimepath+=~/.vim/bundle/neobundle.vim/
+endif
+
+" NeoBundleを初期化
+call neobundle#begin(expand('~/.vim/bundle/'))
+
+" インストールするプラグインをここに記述する
+NeoBundle 'vim-airline/vim-airline'
+NeoBundle 'vim-airline/vim-airline-themes'
+
+call neobundle#end()
+
+" ファイルタイプ別のプラグイン,インデントを有効にする
+filetype plugin indent on
+
+
+
+"
+" status line settings
+"
+
+let g:airline_theme='solarized'
+
+let g:airline#extensions#tabline#enabled=1
+
+let g:airline_solarized_bg='dark'
+
+set ttimeoutlen=50
