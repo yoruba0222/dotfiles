@@ -102,7 +102,7 @@ let g:indentLine_setColors=10
 " status line settings
 "
 
-let g:airline_theme='molokai'
+let g:airline_theme='minimalist'
 
 let g:airline#extensions#tabline#enabled=1
 
