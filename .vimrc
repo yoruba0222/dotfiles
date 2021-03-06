@@ -29,9 +29,9 @@ set tabstop=4
 
 syntax on
 
-set background=dark
+"set background=dark
 
-colorscheme solarized
+colorscheme molokai
 
 set cursorline
 
@@ -53,6 +53,7 @@ call neobundle#begin(expand('~/.vim/bundle/'))
 NeoBundle 'vim-airline/vim-airline'
 NeoBundle 'vim-airline/vim-airline-themes'
 NeoBundle 'altercation/vim-colors-solarized'
+NeoBundle 'tomasr/molokai'
 
 NeoBundle 'scrooloose/syntastic'
 
