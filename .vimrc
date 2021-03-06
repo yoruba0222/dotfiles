@@ -78,8 +78,9 @@ NeoBundle 'vim-airline/vim-airline-themes'
 NeoBundle 'altercation/vim-colors-solarized'
 NeoBundle 'tomasr/molokai'
 
-NeoBundle 'scrooloose/syntastic'
+NeoBundle 'terryma/vim-multiple-cursors'
 
+NeoBundle 'scrooloose/syntastic'
 
 NeoBundle 'Shougo/unite.vim'
 NeoBundle 'ujihisa/unite-colorscheme'
@@ -101,7 +102,7 @@ let g:indentLine_setColors=10
 " status line settings
 "
 
-let g:airline_theme='solarized'
+let g:airline_theme='molokai'
 
 let g:airline#extensions#tabline#enabled=1
 
