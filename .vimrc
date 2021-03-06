@@ -37,6 +37,29 @@ set cursorline
 
 set visualbell t_vb=
 
+set shiftwidth=4
+
+
+" auto completion
+
+inoremap { {}<LEFT>
+inoremap [ []<LEFT>
+inoremap ( ()<LEFT>
+inoremap " ""<LEFT>
+inoremap ' ''<LEFT>
+
+"
+" memorize cursor position
+"
+
+augroup vimrcEx
+	autocmd!
+	autocmd BufReadPost *
+	\ if line("'\"") > 1 && line("'\"") <= line('$') |
+	\   exe "normal! g`\"" |
+	\ endif
+augroup END
+
 "
 " plugin settings
 "
