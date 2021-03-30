@@ -19,6 +19,9 @@ alias gpr='git push -u origin master'
 alias gpn='git push -u origin main'
 alias gs='git status'
 
+# hand made commands
+alias trans='python translate.py'
+
 # others
 alias sc='screen'
 alias cat='bat'

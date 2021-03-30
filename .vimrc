@@ -27,6 +27,8 @@ set autoindent
 
 set tabstop=4
 
+set noswapfile
+
 syntax on
 
 "set background=dark
@@ -106,7 +108,7 @@ let g:airline_theme='minimalist'
 
 let g:airline#extensions#tabline#enabled=1
 
-let g:airline_solarized_bg='dark'
+"let g:airline_solarized_bg='dark'
 
 set ttimeoutlen=50
 
