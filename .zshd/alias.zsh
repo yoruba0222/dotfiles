@@ -29,4 +29,4 @@ alias top='htop'
 alias c='clear ; echo -e "\e[35m$(pwd)"'
 
 # others
-alias set-option='tmux set-option'
+#alias set-option='tmux set-option'
