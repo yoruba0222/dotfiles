@@ -1,0 +1,25 @@
+#!/bin/zsh
+
+if [ $# -eq 0 ]; then
+
+	tmux split-window -h
+	tmux resize-pane -L 40
+	tmux select-pane -t 1
+	tmux send-keys -t 1 'cd $(pwd) ; vim' C-m
+
+else
+
+	case $1 in 
+		1)
+			tmux split-window -v
+			tmux resize-pane -D 20
+			vim
+			;;
+
+		*)
+			echo 'ide: [ERROR] argument not found '
+		
+
+	esac
+
+fi

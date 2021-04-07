@@ -29,6 +29,8 @@ set tabstop=4
 
 set noswapfile
 
+set backspace=indent,eol,start
+
 syntax on
 
 "set background=dark
