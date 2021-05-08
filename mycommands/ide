@@ -2,6 +2,7 @@
 
 if [ $# -eq 0 ]; then
 
+	# normal 
 	tmux split-window -h
 	tmux resize-pane -L 40
 	tmux select-pane -t 1
@@ -16,8 +17,17 @@ else
 			vim
 			;;
 
+		2)
+			tmux split-window -v 
+			tmux resize-pane -D 13 
+			tmux send-keys -t 1 'tmux split-window -h' C-m 
+			tmux send-keys -t 1 'tmux split-window -h' C-m
+			tmux send-keys -t 0 'tmux split-window -h' C-m
+			;;
+
+
 		*)
-			echo 'ide: [ERROR] argument not found '
+			echo 'ide: [ERROR] corresponding argument not found '
 		
 
 	esac

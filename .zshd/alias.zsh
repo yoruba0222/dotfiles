@@ -21,12 +21,14 @@ alias gs='git status'
 
 # hand made commands
 alias trans='python translate.py'
+alias t='trans'
 
 # others
 alias sc='screen'
 alias cat='bat'
 alias top='htop'
 alias c='clear ; echo -e "\e[35m$(pwd)"'
+alias nwsu='networksetup -setairportnetwork en0'
 
 # others
 #alias set-option='tmux set-option'
