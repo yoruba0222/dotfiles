@@ -12,6 +12,20 @@ alias ll='exa -l'
 alias lt='exa --tree'
 alias lta='exa -a --tree'
 
+# cd
+alias ..='cd ../'
+alias ...='cd ../../'
+alias ....='cd ../../../'
+alias ~='cd ~'
+alias do='cd ~/Repositories/dotfiles'
+alias ds='cd ~/Desktop'
+alias dw='cd ~/Downloads'
+
+# safety measures
+alias cp='cp -i'
+alias mv='mv -i'
+alias rm='rm -i'
+
 # git commands
 alias ga='git add'
 alias gc='git commit -m'
@@ -20,8 +34,7 @@ alias gpn='git push -u origin main'
 alias gs='git status'
 
 # hand made commands
-alias trans='python translate.py'
-alias t='trans'
+alias trans='translate.py'
 
 # others
 alias sc='screen'
@@ -31,4 +44,10 @@ alias c='clear ; echo -e "\e[35m$(pwd)"'
 alias nwsu='networksetup -setairportnetwork en0'
 
 # others
-#alias set-option='tmux set-option'
+alias set-option='tmux set-option'
+alias vim='nvim'
+alias pa='ps -e | grep'
+alias h='tldr'
+alias o='open'
+alias p='python'
+alias _='sudo'

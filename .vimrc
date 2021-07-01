@@ -21,9 +21,9 @@ set number
 
 set title
 
-set smartindent
-
 set autoindent
+
+set smartindent
 
 set tabstop=4
 
@@ -33,9 +33,12 @@ set backspace=indent,eol,start
 
 syntax on
 
+set clipboard=unnamedplus
+
 "set background=dark
 
-colorscheme molokai
+
+"colorscheme molokai
 
 set cursorline
 
@@ -51,6 +54,7 @@ inoremap [ []<LEFT>
 inoremap ( ()<LEFT>
 inoremap " ""<LEFT>
 inoremap ' ''<LEFT>
+inoremap < <><LEFT>
 
 "
 " memorize cursor position
@@ -81,48 +85,24 @@ NeoBundle 'vim-airline/vim-airline'
 NeoBundle 'vim-airline/vim-airline-themes'
 NeoBundle 'altercation/vim-colors-solarized'
 NeoBundle 'tomasr/molokai'
+NeoBundle 'cocopon/iceberg.vim'
+NeoBundle 'gkeep/iceberg-dark'
 
 NeoBundle 'terryma/vim-multiple-cursors'
 
+NeoBundle 'scrooloose/nerdtree'
 NeoBundle 'scrooloose/syntastic'
+
+NeoBundle 'nathanaelkane/vim-indent-guides'
+NeoBundle 'Yggdroot/indentLine'
 
 NeoBundle 'Shougo/unite.vim'
 NeoBundle 'ujihisa/unite-colorscheme'
 
-call neobundle#end()
+"----------"
+" 補完機能 "
+"----------"
 
-" ファイルタイプ別のプラグイン,インデントを有効にする
-filetype plugin indent on
-
-"
-" indent line settings
-"
-
-set list lcs=tab:\┆\ 
-
-let g:indentLine_setColors=10
-
-"
-" status line settings
-"
-
-let g:airline_theme='minimalist'
-
-let g:airline#extensions#tabline#enabled=1
-
-"let g:airline_solarized_bg='dark'
-
-set ttimeoutlen=50
-
-"
-" syntastic settings
-"
-
-
-
-"----------------------------------------------------------
-" 補完機能のインストール
-"----------------------------------------------------------
 if has('lua') " lua機能が有効になっている場合・・・・・・①
     " コードの自動補完
     NeoBundle 'Shougo/neocomplete.vim'
@@ -132,9 +112,12 @@ if has('lua') " lua機能が有効になっている場合・・・・・・①
     NeoBundle 'Shougo/neosnippet-snippets'
 endif
 
-"----------------------------------------------------------
-" neocomplete・neosnippetの設定
-"----------------------------------------------------------
+call neobundle#end()
+
+" ファイルタイプ別のプラグイン,インデントを有効にする
+filetype plugin indent on
+
+" neocomplete.vim settings
 if neobundle#is_installed('neocomplete.vim')
     " Vim起動時にneocompleteを有効にする
     let g:neocomplete#enable_at_startup = 1
@@ -154,4 +137,64 @@ if neobundle#is_installed('neocomplete.vim')
     " タブキーで補完候補の選択. スニペット内のジャンプもタブキーでジャンプ・・・・・・③
     imap <expr><TAB> pumvisible() ? "<C-n>" : neosnippet#jumpable() ? "<Plug>(neosnippet_expand_or_jump)" : "<TAB>"
 endif
+
 "
+" indent line settings
+"
+
+set list lcs=tab:\┆\ 
+
+""let g:indentLine_setColors=10
+
+"
+" status line settings
+"
+
+let g:airline_theme='icebergDark'
+
+let g:airline#extensions#tabline#enabled=1
+
+nmap <C-p> <Plug>AirlineSelectPrevTab
+nmap <C-n> <Plug>AirlineSelectNextTab
+
+if !exists('g:airline_symbols')
+	let g:airline_symbols = {}
+endif
+     
+"左側に使用されるセパレータ
+let g:airline_left_sep = '⮀'
+let g:airline_left_alt_sep = '⮁'
+"右側に使用されるセパレータ
+"let g:airline_right_sep = '⮂'
+"let g:airline_right_alt_sep = '⮃'
+"let g:airline_symbols.crypt = '🔒'		"暗号化されたファイル
+"let g:airline_symbols.linenr = '¶'			"行
+"let g:airline_symbols.maxlinenr = '㏑'		"最大行
+"let g:airline_symbols.branch = '⭠'		"gitブランチ
+"let g:airline_symbols.paste = 'ρ'			"ペーストモード
+"let g:airline_symbols.spell = 'Ꞩ'			"スペルチェック
+"let g:airline_symbols.notexists = '∄'		"gitで管理されていない場合
+"let g:airline_symbols.whitespace = 'Ξ'	"空白の警告(余分な空白など)
+
+"let g:airline_solarized_bg='dark'
+
+set ttimeoutlen=50
+
+colorscheme solarized
+
+set background=dark
+"
+" syntastic settings
+"
+
+"
+" NERD TREE settings
+"
+
+nnoremap <silent><C-e> :NERDTreeToggle<CR>
+
+"set tabstop=2 shiftwidth=2 expandtab
+
+"set list listchars=tab:\¦\ 
+
+set termguicolors

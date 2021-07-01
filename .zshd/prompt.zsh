@@ -10,8 +10,12 @@
 autoload colors
 colors
 
-# simple prompt
+# favorite settings
+# [fidio]❯ prompt
 PROMPT="[%F{blue}%n%f]%f%F{green}❯ %f"
+# simple prompt
+#PROMPT="%F{blue}❯ %f"
+
 
 # menlo prompt
 #PROMPT="%{$fg[black]$bg[blue]%} %n %{$reset_color%}%{${fg[blue]}%} "

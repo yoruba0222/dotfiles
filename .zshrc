@@ -1,4 +1,4 @@
-# used from March 2 2021... 
+#used used from March 2 2021... 
 #
 #   __ _     _ _       _                 _              
 #  / _(_) __| (_) ___ ( )___     _______| |__  _ __ ___ 
@@ -31,11 +31,13 @@ zinit light b4b4r07/enhancd
 # github gh command setting
 eval "$(gh completion -s zsh)"
 
-#
+
+
+. `brew --prefix`/etc/profile.d/z.sh
 # source athor setting files
 #
 
-ZSHHOME="${HOME}/Repositories/dotfiles/.zshd"
+ZSHHOME="${HOME}/Dev/dotfiles/.zshd"
 
 if [ -d $ZSHHOME -a -r $ZSHHOME -a \
      -x $ZSHHOME ]; then
@@ -46,8 +48,7 @@ if [ -d $ZSHHOME -a -r $ZSHHOME -a \
 fi
 
 
-
-#source .zshd/alias.zsh
-#source .zshd/hook.zsh
-
 echo "\e[35m$(pwd)"
+
+export TERM=screen-256color
+set termguicolors

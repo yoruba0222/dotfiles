@@ -2,34 +2,34 @@
 
 if [ $# -eq 0 ]; then
 
-	# normal 
-	tmux split-window -h
-	tmux resize-pane -L 40
-	tmux select-pane -t 1
-	tmux send-keys -t 1 'cd $(pwd) ; vim' C-m
+    # normal 
+    tmux split-window -h
+    tmux resize-pane -L 40
+    tmux select-pane -t 1
+    tmux send-keys -t 1 'cd $(pwd) ; nvim' C-m
 
 else
 
-	case $1 in 
-		1)
-			tmux split-window -v
-			tmux resize-pane -D 20
-			vim
-			;;
+    case $1 in 
+        1)
+            tmux split-window -v
+            tmux resize-pane -D 20
+            nvim
+            ;;
 
-		2)
-			tmux split-window -v 
-			tmux resize-pane -D 13 
-			tmux send-keys -t 1 'tmux split-window -h' C-m 
-			tmux send-keys -t 1 'tmux split-window -h' C-m
-			tmux send-keys -t 0 'tmux split-window -h' C-m
-			;;
+        2)
+            tmux split-window -v 
+            tmux resize-pane -D 13 
+            tmux send-keys -t 1 'tmux split-window -h' C-m 
+            tmux send-keys -t 1 'tmux split-window -h' C-m
+            tmux send-keys -t 0 'tmux split-window -h' C-m
+            ;;
 
 
-		*)
-			echo 'ide: [ERROR] corresponding argument not found '
-		
+        *)
+            echo 'ide: [ERROR] corresponding argument not found '
+        
 
-	esac
+    esac
 
 fi
