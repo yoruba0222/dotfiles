@@ -6,11 +6,11 @@
 #
 
 # ls
-alias ls='exa'
-alias la='exa -a'
-alias ll='exa -l'
-alias lt='exa --tree'
-alias lta='exa -a --tree'
+alias ls='lsd'
+alias la='lsd -a'
+alias ll='lsd -l'
+alias lt='lsd --tree'
+alias lta='lsd -a --tree'
 
 # cd
 alias ..='cd ../'
