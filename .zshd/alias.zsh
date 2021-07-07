@@ -17,7 +17,7 @@ alias ..='cd ../'
 alias ...='cd ../../'
 alias ....='cd ../../../'
 alias ~='cd ~'
-alias do='cd ~/Repositories/dotfiles'
+alias do='cd ~/Dev/dotfiles'
 alias ds='cd ~/Desktop'
 alias dw='cd ~/Downloads'
 

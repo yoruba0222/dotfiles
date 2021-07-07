@@ -49,6 +49,3 @@ fi
 
 
 echo "\e[35m$(pwd)"
-
-export TERM=screen-256color
-set termguicolors
