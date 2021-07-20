@@ -1,7 +1,7 @@
 {
     "status": {
-        "source": "en",
-        "target": "ja"
+        "source": "ja",
+        "target": "en"
     },
     "languages": {
         "Auto": "",

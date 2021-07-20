@@ -32,9 +32,12 @@ alias gc='git commit -m'
 alias gpr='git push -u origin master'
 alias gpn='git push -u origin main'
 alias gs='git status'
+alias gl="git log"
 
-# hand made commands
+# handmade commands
 alias trans='translate.py'
+alias term-youtube='python ~/Dev/term-youtube/term-youtube/__main__.py'
+alias ty='term-youtube'
 
 # others
 alias sc='screen'
@@ -46,8 +49,7 @@ alias nwsu='networksetup -setairportnetwork en0'
 # others
 alias set-option='tmux set-option'
 alias vim='nvim'
+alias yd='youtube-dl'
 alias pa='ps -e | grep'
 alias h='tldr'
-alias o='open'
-alias p='python'
 alias _='sudo'

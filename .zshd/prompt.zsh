@@ -7,14 +7,14 @@
 #
 
 # color settings
-autoload colors
-colors
+# autoload colors
+# colors
 
 # favorite settings
 # [fidio]❯ prompt
-#PROMPT="[%F{blue}%n%f]%f%F{green}❯ %f"
+PROMPT="[%F{blue}%n%f]%f%F{green}❯ %f"
 # simple prompt
-PROMPT="%F{blue}❯ %f"
+# PROMPT="%F{blue}❯ %f"
 
 
 # menlo prompt

@@ -13,7 +13,7 @@ else
     case $1 in 
         1)
             tmux split-window -v
-            tmux resize-pane -D 20
+            tmux resize-pane -D 23
             nvim
             ;;
 
