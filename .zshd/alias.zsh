@@ -11,13 +11,15 @@ alias la='lsd -a'
 alias ll='lsd -l'
 alias lt='lsd --tree'
 alias lta='lsd -a --tree'
+alias lla='lsd -l -a'
+alias llt='lsd -l --tree'
 
 # cd
 alias ..='cd ../'
 alias ...='cd ../../'
 alias ....='cd ../../../'
 alias ~='cd ~'
-alias do='cd ~/Dev/dotfiles'
+alias df='cd ~/Dev/dotfiles'
 alias ds='cd ~/Desktop'
 alias dw='cd ~/Downloads'
 
@@ -43,7 +45,7 @@ alias ty='term-youtube'
 alias sc='screen'
 alias cat='bat'
 alias top='htop'
-alias c='clear ; echo -e "\e[35m$(pwd)"'
+alias c='clear ; echo -e "\e[2m\e[34m[\e[0m\e[34m$(pwd)\e[0m\e[2m\e[34m]"'
 alias nwsu='networksetup -setairportnetwork en0'
 
 # others
@@ -53,3 +55,8 @@ alias yd='youtube-dl'
 alias pa='ps -e | grep'
 alias h='tldr'
 alias _='sudo'
+
+# system setings
+alias ssleep='osascript -e 'tell app "Finder" to sleep''
+alias sreboot='sudo reboot'
+alias sshutdown='sudo shutdown -h now'

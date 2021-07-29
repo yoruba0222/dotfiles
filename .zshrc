@@ -48,4 +48,4 @@ if [ -d $ZSHHOME -a -r $ZSHHOME -a \
 fi
 
 
-echo "\e[35m$(pwd)"
+echo "\e[2m\e[34m[\e[0m\e[34m$(pwd)\e[0m\e[2m\e[34m]"
