@@ -47,5 +47,18 @@ if [ -d $ZSHHOME -a -r $ZSHHOME -a \
     done
 fi
 
+HOME_PATH=$HOME
+CURRENT_PATH=$(pwd)
 
-echo "\e[2m\e[34m[\e[0m\e[34m$(pwd)\e[0m\e[2m\e[34m]"
+case "$HOME_PATH" in
+    "$CURRENT_PATH") 
+        echo "\e[2m\e[34m[\e[0m\e[34m~\e[0m\e[2m\e[34m]";;
+    "${CURRENT_PATH:0:12}")
+        CURRENT_PATH=${CURRENT_PATH#*/}
+        CURRENT_PATH=${CURRENT_PATH#*/}
+        CURRENT_PATH=${CURRENT_PATH#*/}
+        home="~/"
+        echo "\e[2m\e[34m[\e[0m\e[34m$home$CURRENT_PATH\e[0m\e[2m\e[34m]";;
+    *)
+        echo "\e[2m\e[34m[\e[0m\e[34m$CURRENT_PATH\e[0m\e[2m\e[34m]";;
+esac

@@ -45,7 +45,7 @@ alias ty='term-youtube'
 alias sc='screen'
 alias cat='bat'
 alias top='htop'
-alias c='clear ; echo -e "\e[2m\e[34m[\e[0m\e[34m$(pwd)\e[0m\e[2m\e[34m]"'
+alias c='clear ; cust_pwd'
 alias nwsu='networksetup -setairportnetwork en0'
 
 # others
@@ -60,3 +60,21 @@ alias _='sudo'
 alias ssleep='osascript -e 'tell app "Finder" to sleep''
 alias sreboot='sudo reboot'
 alias sshutdown='sudo shutdown -h now'
+
+cust_pwd() {
+    HOME_PATH=$HOME 
+    CURRENT_PATH=$(pwd)
+
+    case "$HOME_PATH" in
+        "$CURRENT_PATH")
+            echo "\e[2m\e[34m[\e[0m\e[34m~\e[0m\e[2m\e[34m]";;
+        "${CURRENT_PATH:0:12}")
+            CURRENT_PATH=${CURRENT_PATH#*/}
+            CURRENT_PATH=${CURRENT_PATH#*/}
+            CURRENT_PATH=${CURRENT_PATH#*/}
+            home="~/"
+            echo "\e[2m\e[34m[\e[0m\e[34m$home$CURRENT_PATH\e[0m\e[2m\e[34m]";;
+        *)
+            echo "\e[2m\e[34m[\e[0m\e[34m$CURRENT_PATH\e[0m\e[2m\e[34m]";;
+    esac
+}
