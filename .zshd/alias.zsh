@@ -47,13 +47,12 @@ alias cat='bat'
 alias top='htop'
 alias c='clear ; cust_pwd'
 alias nwsu='networksetup -setairportnetwork en0'
-
-# others
 alias set-option='tmux set-option'
 alias vim='nvim'
 alias yd='youtube-dl'
 alias pa='ps -e | grep'
 alias h='tldr'
+alias wttr='display_weather'
 alias _='sudo'
 
 # system setings
@@ -77,4 +76,10 @@ cust_pwd() {
         *)
             echo "\e[2m\e[34m[\e[0m\e[34m$CURRENT_PATH\e[0m\e[2m\e[34m]";;
     esac
+}
+
+display_weather() {
+    baseURL="wttr.in/"
+    URL=$baseURL$1
+    curl $URL
 }
