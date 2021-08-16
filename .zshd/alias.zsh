@@ -22,6 +22,7 @@ alias ~='cd ~'
 alias df='cd ~/Dev/dotfiles'
 alias ds='cd ~/Desktop'
 alias dw='cd ~/Downloads'
+alias dv='cd ~/Dev'
 
 # safety measures
 alias cp='cp -i'
@@ -37,8 +38,8 @@ alias gs='git status'
 alias gl="git log"
 
 # handmade commands
-alias trans='translate.py'
-alias term-youtube='python ~/Dev/term-youtube/term-youtube/__main__.py'
+alias trans='translate'
+alias term-youtube='python ~/Dev/term-youtube/term_youtube/__main__.py'
 alias ty='term-youtube'
 
 # others
