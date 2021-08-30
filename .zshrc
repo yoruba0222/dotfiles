@@ -96,3 +96,4 @@ case "$HOME_PATH" in
     *)
         echo "\e[2m\e[34m[\e[0m\e[34m$CURRENT_PATH\e[0m\e[2m\e[34m]";;
 esac
+export PATH="/usr/local/sbin:$PATH"
