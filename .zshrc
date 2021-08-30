@@ -86,14 +86,14 @@ CURRENT_PATH=$(pwd)
 
 case "$HOME_PATH" in
     "$CURRENT_PATH") 
-        echo "\e[2m\e[34m[\e[0m\e[34m~\e[0m\e[2m\e[34m]";;
+        echo "\e[2m\e[34m[\e[0m\e[34m~\e[0m\e[2m\e[34m] $(parse_git_branch)";;
     "${CURRENT_PATH:0:12}")
         CURRENT_PATH=${CURRENT_PATH#*/}
         CURRENT_PATH=${CURRENT_PATH#*/}
         CURRENT_PATH=${CURRENT_PATH#*/}
         home="~/"
-        echo "\e[2m\e[34m[\e[0m\e[34m$home$CURRENT_PATH\e[0m\e[2m\e[34m]";;
+        echo "\e[2m\e[34m[\e[0m\e[34m$home$CURRENT_PATH\e[0m\e[2m\e[34m] $(parse_git_branch)";;
     *)
-        echo "\e[2m\e[34m[\e[0m\e[34m$CURRENT_PATH\e[0m\e[2m\e[34m]";;
+        echo "\e[2m\e[34m[\e[0m\e[34m$CURRENT_PATH\e[0m\e[2m\e[34m] $(parse_git_branch)";;
 esac
 export PATH="/usr/local/sbin:$PATH"

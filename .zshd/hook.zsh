@@ -12,15 +12,15 @@ function chpwd_function0() {
     
     case "$HOME_PATH" in
         "$CURRENT_PATH") 
-            echo "\n\e[2m\e[34m[\e[0m\e[34m~\e[0m\e[2m\e[34m]";;
+            echo "\n\e[2m\e[34m[\e[0m\e[34m~\e[0m\e[2m\e[34m] $(parse_git_branch)";;
         "${CURRENT_PATH:0:12}")
             CURRENT_PATH=${CURRENT_PATH#*/}
             CURRENT_PATH=${CURRENT_PATH#*/}
             CURRENT_PATH=${CURRENT_PATH#*/}
             home="~/"
-            echo "\n\e[2m\e[34m[\e[0m\e[34m$home$CURRENT_PATH\e[0m\e[2m\e[34m]";;
+            echo "\n\e[2m\e[34m[\e[0m\e[34m$home$CURRENT_PATH\e[0m\e[2m\e[34m] $(parse_git_branch)";;
         *)
-            echo "\n\e[2m\e[34m[\e[0m\e[34m$CURRENT_PATH\e[0m\e[2m\e[34m]";;
+            echo "\n\e[2m\e[34m[\e[0m\e[34m$CURRENT_PATH\e[0m\e[2m\e[34m] $(parse_git_branch)";;
     esac
 }
 

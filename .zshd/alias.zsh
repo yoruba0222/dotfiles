@@ -61,9 +61,13 @@ alias wttr='display_weather'
 alias _='sudo'
 
 # system setings
-alias ssleep='osascript -e 'tell app "Finder" to sleep''
+alias ssleep='osascript -e ''tell app "Finder" to sleep'''
 alias sreboot='sudo reboot'
 alias sshutdown='sudo shutdown -h now'
+
+function parse_git_branch {
+    git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ [\1]/'
+}
 
 cust_pwd() {
     HOME_PATH=$HOME 
@@ -71,15 +75,15 @@ cust_pwd() {
 
     case "$HOME_PATH" in
         "$CURRENT_PATH")
-            echo "\e[2m\e[34m[\e[0m\e[34m~\e[0m\e[2m\e[34m]";;
+            echo "\e[2m\e[34m[\e[0m\e[34m~\e[0m\e[2m\e[34m] $(parse_git_branch)";;
         "${CURRENT_PATH:0:12}")
             CURRENT_PATH=${CURRENT_PATH#*/}
             CURRENT_PATH=${CURRENT_PATH#*/}
             CURRENT_PATH=${CURRENT_PATH#*/}
             home="~/"
-            echo "\e[2m\e[34m[\e[0m\e[34m$home$CURRENT_PATH\e[0m\e[2m\e[34m]";;
+            echo "\e[2m\e[34m[\e[0m\e[34m$home$CURRENT_PATH\e[0m\e[2m\e[34m] $(parse_git_branch)";;
         *)
-            echo "\e[2m\e[34m[\e[0m\e[34m$CURRENT_PATH\e[0m\e[2m\e[34m]";;
+            echo "\e[2m\e[34m[\e[0m\e[34m$CURRENT_PATH\e[0m\e[2m\e[34m] $(parse_git_branch)";;
     esac
 }
 
